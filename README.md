@@ -11,7 +11,7 @@ Quick start for your next WP based GatsbyJS project!
 
 ## Usage
 
-Clone project then set your gql endpoint in config.js
+Clone project then set your gql endpoint in gatsby-config.js
 
 ```sh
 npm install
