@@ -6,7 +6,11 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress-experimental",
       options: {
-        url: "https://baharbeauty.co/graphql",
+        url: "YOUR_WP_GQL_URL_GOES_HERE",
+        schema: {
+          requestConcurrency: 5,
+          previewRequestConcurrency: 2,
+        },
       },
     },
     "gatsby-plugin-sass",
