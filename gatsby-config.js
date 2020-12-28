@@ -6,7 +6,9 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress-experimental",
       options: {
-        url: "YOUR_WP_GQL_URL_GOES_HERE",
+        url: "https://baharbeauty.co/graphql",
+        // Uncomment this if needed
+
         schema: {
           requestConcurrency: 5,
           previewRequestConcurrency: 2,
@@ -18,12 +20,14 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
+    // Add your own logo
+
+    // {
+    //   resolve: "gatsby-plugin-manifest",
+    //   options: {
+    //     icon: "src/images/icon.png",
+    //   },
+    // },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",

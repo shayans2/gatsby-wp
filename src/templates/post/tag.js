@@ -12,7 +12,7 @@ const Tag = ({ data, pageContext }) => {
       <Pagination
         currentPage={pageContext.currentPage}
         pageCount={pageContext.pageCount}
-        base="/tag"
+        base={pageContext.base}
       />
     </>
   );

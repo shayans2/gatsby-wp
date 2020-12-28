@@ -1,2 +1,2 @@
-exports.PAGE_SIZE = 10;
+exports.PAGE_SIZE = 2;
 exports.POSTS_SLUG = "blog";

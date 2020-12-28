@@ -12,6 +12,7 @@ const PostList = ({ data, pageContext }) => {
       <Pagination
         currentPage={pageContext.currentPage}
         pageCount={pageContext.pageCount}
+        base={pageContext.base}
       />
     </>
   );
