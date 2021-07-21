@@ -1,17 +1,22 @@
 # Gatsby WordPress Boilerplate
 
-Quick start for your next WP based GatsbyJS project!
+Quick start for your next GatsbyJS project!
 
 ## Features
 
 - Pagination, Categories, Tags, Post List, Single Post, Single Page
 - Completely customizable
-- Clean
 - Farsi compatible URIs
 
 ## Usage
 
-Clone project then set your gql endpoint in gatsby-config.js
+Clone the project, then create a .env file in the root folder and set your Wordpress GraphQL endpoint:
+
+```sh
+WORDPRESS_GQL_URL="MY_ENDPOINT"
+```
+
+Install dependencies:
 
 ```sh
 npm install
