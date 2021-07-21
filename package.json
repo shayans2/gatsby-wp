@@ -1,7 +1,6 @@
 {
   "name": "my-gatsby-site",
   "version": "1.0.0",
-  "private": true,
   "description": "My Gatsby Site",
   "author": "Shayan Bemanian",
   "keywords": [
@@ -12,24 +11,41 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "prettier": "prettier '**/*.{js,jsx,ts,tsx,css,md}' --check  --ignore-path .gitignore --ignore-pattern '/public/*' ",
+    "lint": "yarn lint:scripts; yarn lint:styles",
+    "lint:scripts": "eslint '**/*.{js,jsx,ts,tsx}' --ignore-path .gitignore --ignore-pattern '/public/*' "
   },
-  "license": "0BSD",
+  "license": "MIT",
   "dependencies": {
-    "gatsby": "^2.26.1",
-    "gatsby-image": "^2.8.0",
-    "gatsby-plugin-manifest": "^2.9.0",
-    "gatsby-plugin-offline": "^3.7.0",
-    "gatsby-plugin-react-helmet": "^3.7.0",
-    "gatsby-plugin-sass": "^2.8.0",
-    "gatsby-plugin-sharp": "^2.11.1",
-    "gatsby-plugin-sitemap": "^2.9.0",
-    "gatsby-source-filesystem": "^2.8.0",
-    "gatsby-source-wordpress-experimental": "^6.0.0",
-    "gatsby-transformer-sharp": "^2.9.0",
-    "node-sass": "^5.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "dotenv": "^10.0.0",
+    "gatsby": "^3.10.1",
+    "gatsby-image": "^3.10.0",
+    "gatsby-plugin-manifest": "^3.10.0",
+    "gatsby-plugin-offline": "^4.10.0",
+    "gatsby-plugin-react-helmet": "^4.10.0",
+    "gatsby-plugin-sass": "^4.10.0",
+    "gatsby-plugin-sharp": "^3.10.2",
+    "gatsby-plugin-sitemap": "^4.6.0",
+    "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-source-wordpress": "^5.10.0",
+    "gatsby-transformer-sharp": "^3.10.0",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "prettier": "^2.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix --ignore-path .gitignore  --ignore-pattern '/public/*'",
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   }
 }

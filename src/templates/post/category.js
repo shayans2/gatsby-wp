@@ -1,7 +1,7 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Pagination from "../../components/Pagination";
-import PostItem from "../../components/PostItem";
+import React from 'react'
+import { graphql } from 'gatsby'
+import Pagination from '../../components/Pagination'
+import PostItem from '../../components/PostItem'
 
 const Category = ({ data, pageContext }) => {
   return (
@@ -15,10 +15,10 @@ const Category = ({ data, pageContext }) => {
         base={pageContext.base}
       />
     </>
-  );
-};
+  )
+}
 
-export default Category;
+export default Category
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!, $categoryId: String!) {
@@ -39,4 +39,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

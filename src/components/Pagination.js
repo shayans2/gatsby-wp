@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react'
+import { Link } from 'gatsby'
 
 const Pagination = ({ currentPage, pageCount, base }) => {
   return (
@@ -20,7 +20,7 @@ const Pagination = ({ currentPage, pageCount, base }) => {
         <span />
       )}
     </nav>
-  );
-};
+  )
+}
 
-export default Pagination;
+export default Pagination

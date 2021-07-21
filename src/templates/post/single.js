@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
 const SinglePost = ({ data: { wpPost } }) => {
   return (
@@ -8,10 +8,10 @@ const SinglePost = ({ data: { wpPost } }) => {
       <p>{wpPost.date}</p>
       <div dangerouslySetInnerHTML={{ __html: wpPost.content }} />
     </>
-  );
-};
+  )
+}
 
-export default SinglePost;
+export default SinglePost
 export const query = graphql`
   query($id: String!) {
     wpPost(id: { eq: $id }) {
@@ -26,4 +26,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

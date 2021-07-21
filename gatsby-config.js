@@ -1,12 +1,16 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "My Gatsby Site",
+    description: "An awesome Gatsby-Wordpress boilerplate.",
+    author: "Shayan Bemanian",
   },
   plugins: [
     {
-      resolve: "gatsby-source-wordpress-experimental",
+      resolve: "gatsby-source-wordpress",
       options: {
-        url: "YOUR_GRAPHQL_ENDPOINT",
+        url: `${process.env.WORDPRESS_GQL_URL}/graphql`,
         // Uncomment this if needed
         // schema: {
         //   requestConcurrency: 5,
@@ -19,20 +23,12 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
-    // Add your own logo
-
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     icon: "src/images/icon.png",
-    //   },
-    // },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/dist/images/`,
       },
       __key: "images",
     },
