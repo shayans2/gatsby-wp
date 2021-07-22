@@ -13,6 +13,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "prettier": "pretty-quick --staged",
+    "prepare": "husky install",
     "lint": "npm run lint:js && npm run prettier",
     "lint:eslint": "eslint --ignore-path .gitignore",
     "lint:js": "npm run lint:eslint -- . ",
