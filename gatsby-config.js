@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: 'My Gatsby Site',
+    title: 'My website',
     description: 'An awesome Gatsby-Wordpress boilerplate.',
     author: 'Shayan Bemanian',
   },
