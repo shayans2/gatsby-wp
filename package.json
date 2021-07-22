@@ -12,9 +12,11 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "prettier": "prettier '**/*.{js,jsx,ts,tsx,css,md}' --check  --ignore-path .gitignore --ignore-pattern '/public/*' ",
-    "lint": "yarn lint:scripts; yarn lint:styles",
-    "lint:scripts": "eslint '**/*.{js,jsx,ts,tsx}' --ignore-path .gitignore --ignore-pattern '/public/*' "
+    "prettier": "pretty-quick --staged",
+    "lint": "npm run lint:js && npm run prettier",
+    "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:staged": "lint-staged"
   },
   "license": "MIT",
   "dependencies": {
@@ -37,15 +39,7 @@
   },
   "devDependencies": {
     "husky": "^7.0.1",
-    "prettier": "^2.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --cache --fix --ignore-path .gitignore  --ignore-pattern '/public/*'",
-    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1"
   }
 }
